@@ -21,10 +21,10 @@ jobs:
 
       - name: Upload Artifact
         if: github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v3
+        id: deployment
         with:
           path: "images"
-          name: github-pages
 
   deploy-pages:
     if: github.ref == 'refs/heads/main'
