@@ -24,6 +24,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: "images"
+          name: github-pages
 
   deploy-pages:
     if: github.ref == 'refs/heads/main'
@@ -42,3 +43,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
