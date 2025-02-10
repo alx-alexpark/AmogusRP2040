@@ -15,9 +15,9 @@ jobs:
           pcb_file: AMOGUSRP2040.kicad_pcb
           output_path: ${{ github.workspace }}/images
         
-      - name: Setup Pages
-        if: github.ref == 'refs/heads/main'
-        uses: actions/configure-pages@v3
+      # - name: Setup Pages
+      #   if: github.ref == 'refs/heads/main'
+      #   uses: actions/configure-pages@v3
 
       - name: Upload Artifact
         if: github.ref == 'refs/heads/main'
@@ -42,5 +42,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
         
